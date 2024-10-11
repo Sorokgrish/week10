@@ -3,12 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/style/style.css">
     <title>Document</title>
 </head>
 <body>
-    <button onclick="showMessage()">Кликни меня</button>
-    <button onclick="showMessage()">Кликни меня</button>
+    <div id="elem-content">Cat</div>
+    <div id="elem">
+        <img id="elem-img1" src="https://static.sobaka.ru/uploads/nsk/1.jpg" alt="cat1">       
+
+    </div>
+    <div id="click">
+        <button onclick="prevImage()">Previous</button>
+        <button onclick="nextImage()">Next</button>
+     </div>
+
     <script>
+        let currentIndex = 1;
+
+           function prevImage() {
+            if (currentIndex === 1) {
+                currentIndex = 2;
+                document.getElementById("elem-img1").src = "https://i.pinimg.com/originals/20/89/1b/20891bee870181d10f12e69541342613.jpg";
+            } else {
+                currentIndex = 1;
+                document.getElementById("elem-img1").src = "https://static.sobaka.ru/uploads/nsk/1.jpg";
+            }
+        }
+
+        
+        function nextImage() {
+            if (currentIndex === 1) {
+                currentIndex = 2;
+                document.getElementById("elem-img1").src = "https://i.pinimg.com/originals/20/89/1b/20891bee870181d10f12e69541342613.jpg";
+            } else {
+                currentIndex = 1;
+                document.getElementById("elem-img1").src = "https://static.sobaka.ru/uploads/nsk/1.jpg";
+            }
+        }
 
     </script>
 </body>
